@@ -26,13 +26,13 @@ public class Record implements Serializable {
 
 	@ManyToOne
 	@JoinColumn(name = "game_id")
-	private Gamer game;
+	private Game game;
 
 	public Record() {
 
 	}
 
-	public Record(Long id, String name, Integer age, Instant moment, Gamer gamer) {
+	public Record(Long id, String name, Integer age, Instant moment, Game gamer) {
 		super();
 		this.id = id;
 		this.name = name;
@@ -73,11 +73,11 @@ public class Record implements Serializable {
 		this.moment = moment;
 	}
 
-	public Gamer getGamer() {
+	public Game getGamer() {
 		return game;
 	}
 
-	public void setGamer(Gamer gamer) {
+	public void setGamer(Game gamer) {
 		this.game = gamer;
 	}
 

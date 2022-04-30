@@ -16,7 +16,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "tb_game")
-public class Gamer implements Serializable {
+public class Game implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
@@ -32,11 +32,11 @@ public class Gamer implements Serializable {
 	@OneToMany(mappedBy = "game")
 	private List<Record> records = new ArrayList<>();
 
-	public Gamer() {
+	public Game() {
 
 	}
 
-	public Gamer(Long id, String title, String platform, Genre genre) {
+	public Game(Long id, String title, String platform, Genre genre) {
 		super();
 		this.id = id;
 		this.title = title;
@@ -93,7 +93,7 @@ public class Gamer implements Serializable {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Gamer other = (Gamer) obj;
+		Game other = (Game) obj;
 		return Objects.equals(id, other.id);
 	}
 

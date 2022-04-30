@@ -23,7 +23,7 @@ public class Genre implements Serializable {
 	private String name;
 
 	@OneToMany(mappedBy = "genre")
-	private List<Gamer> games = new ArrayList<>();
+	private List<Game> games = new ArrayList<>();
 
 	public Genre() {
 
@@ -51,7 +51,7 @@ public class Genre implements Serializable {
 		this.name = name;
 	}
 
-	public List<Gamer> getGames() {
+	public List<Game> getGames() {
 		return games;
 	}
 
